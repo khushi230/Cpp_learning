@@ -34,8 +34,8 @@ void solve(vector<vector<int>> &mat, vector<vector<int>> &visited, vector<int> &
 
     for (int k = 0; k < 4; k++)
     {
-        int nexti = i + xarr;
-        int nextj = j + yarr;
+        int nexti = i + xarr[k];
+        int nextj = j + yarr[k];
         if (isValid(mat, visited, nexti, nextj))
         {
             visited[nexti][nexti] = 1;
@@ -97,7 +97,7 @@ int main(int argc, int **argv)
         int output = 1;
         for (int k = 1; k < m; k++)
         {
-            output = output * mat[k];
+            output = output * count[k];
         }
     }
     return 0;
