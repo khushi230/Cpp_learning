@@ -106,7 +106,6 @@ int main(int argc, char **argv)
             output = output * count[i];
         }
         cout << output << endl;
-        ;
     }
     return 0;
 }

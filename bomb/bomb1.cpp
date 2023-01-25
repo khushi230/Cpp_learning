@@ -5,12 +5,12 @@ using namespace std;
 int n, m;
 int ans = INT_MAX;
 int countpaths = 0;
-int xarr[] = {0, -1, 0, 1};
+int xarr[] = {0 - 1, 0, 1};
 int yarr[] = {-1, 0, 1, 0};
 
-bool isValid(vector<vector<int>> &mat, vector<vector<int>> &visited, int nexti, int nextj)
+bool isValid(vector<vector<int>> &mat, vector<vector<int>> &visited, int i, int j)
 {
-    if (nexti > 0 && nextj > 0 && nexti < n && nextj < n && mat[nexti][nextj] != 9 && visited[nexti][nextj] == 0)
+    if (i > 0 && j > 0 && i < n && j < n && visited[i][j] == 0 && mat[i][j] != 9)
         return true;
     return false;
 }
@@ -38,7 +38,7 @@ void solve(vector<vector<int>> &mat, vector<vector<int>> &visited, vector<int> &
         int nextj = j + yarr[k];
         if (isValid(mat, visited, nexti, nextj))
         {
-            visited[nexti][nexti] = 1;
+            visited[nexti][nextj] = 1;
             len++;
             solve(mat, visited, count, currval, nextval, nexti, nextj, len);
             len--;
@@ -79,10 +79,12 @@ void func(vector<vector<int>> &mat, vector<int> &count, int m)
 
 int main(int argc, int **argv)
 {
+    int test_case;
     int T;
     cin >> T;
-    for (int test_case = 0; test_case < T; test_case++)
+    for (test_case = 1; test_case <= T; ++test_case)
     {
+        n = 0, m = 0;
         cin >> n >> m;
         vector<vector<int>> mat(n, vector<int>(n, 0));
         for (int i = 0; i < n; i++)
@@ -99,6 +101,7 @@ int main(int argc, int **argv)
         {
             output = output * count[k];
         }
+        cout << output << endl;
     }
     return 0;
 }
