@@ -1,6 +1,4 @@
 #include <iostream>
-// #define abc <bits/stdc++.h>
-// #include abc
 using namespace std;
 
 int main()
