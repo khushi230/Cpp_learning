@@ -50,16 +50,17 @@ int main(int argc, int **argv)
             cin >> bd[i];
             vis[i] = 0;
         }
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if (!vis[i])
+        for (int i = 0; i < n; i++)
         {
-            vis[i] = 1;
-            solve(i, 1);
-            vis[i] = 0;
+            if (!vis[i])
+            {
+                vis[i] = 1;
+                solve(i, 1);
+                vis[i] = 0;
+            }
         }
+        cout << ans << endl;
+        ans = 0;
     }
-    cout << ans << endl;
-    ans = 0;
+    return 0;
 }
