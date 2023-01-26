@@ -5,6 +5,7 @@ void arrange(int *arr, int n)
 {
     int temp = 0;
     int temp2 = 1;
+
     for (int i = 0; i < n; i++)
     {
         arr[i] = 2 * i + 1;

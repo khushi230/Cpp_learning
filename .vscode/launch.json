@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/New/Desktop/Cpp_learning/array",
-      "program": "c:/Users/New/Desktop/Cpp_learning/array/build/Debug/outDebug",
+      "cwd": "c:/Users/New/Desktop/Cpp_learning",
+      "program": "c:/Users/New/Desktop/Cpp_learning/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
